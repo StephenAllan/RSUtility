@@ -1,0 +1,20 @@
+
+homepage:
+    path: /
+    defaults:
+        _controller: AppBundle\Controller\DefaultController::indexAction
+
+item_info_upper:
+    path: /itemInfo.json
+    defaults:
+        _controller: AppBundle\Controller\DefaultController::itemInfoAction
+
+item_info_lower:
+    path: /iteminfo.json
+    defaults:
+        _controller: AppBundle\Controller\DefaultController::itemInfoAction
+
+utility:
+    path: /utility
+    defaults:
+        _controller: AppBundle\Controller\DefaultController::utilityAction

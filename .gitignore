@@ -11,9 +11,6 @@
 /var/cache/*
 /var/logs/*
 /var/sessions/*
-!var/cache/.gitkeep
-!var/logs/.gitkeep
-!var/sessions/.gitkeep
 
 # Parameters
 /app/config/parameters.yml
@@ -46,3 +43,10 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+# PHPStorm
+/.idea/
+
+# JSON Resources
+/app/Resources/json/
+
