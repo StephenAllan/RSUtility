@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div>
+        <table id="itemTable" class="table table-striped table-bordered table-hover table-condensed">
+            <thead>
+            <tr>
+                <th colspan="3" class="align-middle">Item Information</th>
+                <th colspan="3" class="align-middle">Calculated Data</th>
+                <th colspan="3" class="align-middle">Current Prices</th>
+            </tr>
+            <tr>
+                <th class="align-middle">ID</th>
+                <th class="align-middle">Name</th>
+                <th class="align-middle">High Alchemy Value (GP)</th>
+                <th class="align-middle">Profit (GP)</th>
+                <th class="align-middle">Flipping Margin (GP)</th>
+                <th class="align-middle">Highest Buy Price (GP)</th>
+                <th class="align-middle">Buying Price (GP)</th>
+                <th class="align-middle">Selling Price (GP)</th>
+                <th class="align-middle">Overall Price (GP)</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for value in data %}
+                <tr>
+                    <td>{{ value.id }}</td>
+                    <td>{{ value.name }}</td>
+                    <td>{{ value.highAlchemyValue }}</td>
+                    <td>{{ value.profit }}</td>
+                    <td>{{ value.flippingMargin }}</td>
+                    <td>{{ value.highestBuyPrice }}</td>
+                    <td>{{ value.buying }}</td>
+                    <td>{{ value.selling }}</td>
+                    <td>{{ value.overall }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('js/utility.js') }}"></script>
+{% endblock %}

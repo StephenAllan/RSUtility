@@ -1,0 +1,17 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+services:
+    utility_repository:
+        class: AppBundle\Repository\UtilityRepository
+        arguments:
+            - '%json_path%%item_info_file%'
+            - '%rs_buddy_api%%rs_buddy_api_current%'
+            - '%minimum_item_value%'
+            - '%api_maximum_queries%'
+            - '%nature_rune_id%'
+        autowire: true
+
+    guzzle_client:
+        class: GuzzleHttp\Client
+        arguments:
+            - {base_uri: '%rs_buddy_uri%'}
