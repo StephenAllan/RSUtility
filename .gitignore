@@ -1,6 +1,6 @@
 /.idea/
 
-/app/config/parameters.yml.dist
+/app/config/parameters.yml
 /app/Resources/json/
 
 /bin/*
