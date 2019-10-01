@@ -1,10 +1,12 @@
+# This file is auto-generated during the composer install
 parameters:
     json_path: '%kernel.root_dir%/../app/Resources/json/'
-    item_info_file: 'items_osrs.json'
+    item_info_file: items_osrs.json
     rs_buddy_uri: 'https://api.rsbuddy.com'
     rs_buddy_api: '/grandExchange?'
-    rs_buddy_api_current: 'a=guidePrice'
-    rs_buddy_api_historical: 'a=graph'
+    rs_buddy_api_current: a=guidePrice
+    rs_buddy_api_historical: a=graph
     api_maximum_queries: 100
     minimum_item_value: 500
     nature_rune_id: 561
+    secret: ThisTokenIsNotSoSecretChangeIt
